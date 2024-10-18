@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML table</title>
+
+    <style>
+      /* CSS untuk membuat tabel sederhana */
+      table {
+        width: 100%;
+        border-collapse: collapse; /* menggabungkan border antar sel*/
+      }
+      th,
+      td {
+        border: 1px solid rgb(230, 8, 8); /* menambahkan border pada setiap sel*/
+        padding: 8px;
+        text-align: left; /*menyelaraskan text ke kiri*/
+      }
+      th {
+        background-color: #e4e1aa; /* memberi warna latar pada th*/
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Basic HTML table</h2>
+
+    <!-- Membuat tabel sederhana-->
+    <table>
+      <thead>
+        <tr>
+          <!-- Membuat header tabel-->
+          <th>First Name</th>
+          <!-- Membuat kolom header-->
+          <th>Last Name</th>
+          <!-- Membuat kolom header-->
+          <th>Age</th>
+          <!-- Membuat kolom header-->
+          <th>Alamat</th>
+          <!-- Membuat kolom header-->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Membuat baris tabel-->
+          <td>Dhani</td>
+          <!-- Membuat kolom tabel-->
+          <td>Triyoga</td>
+          <td>20</td>
+          <td>Jepara</td>
+        </tr>
+        <tr>
+          <td>Kane</td>
+          <td>Harry</td>
+          <td>30</td>
+          <td>Surabaya</td>
+        </tr>
+        <tr>
+          <td>Kai</td>
+          <td></td>
+          <td>40</td>
+          <td>Malang</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
