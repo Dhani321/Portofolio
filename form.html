@@ -3,19 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
     <title>Login Form</title>
+
     <!-- Menambahkan style CSS untuk tampilan form -->
     <style>
       /* Pengaturan tampilan body agar form berada di tengah halaman */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
 
       /* Pengaturan container form login */
       .login-container {
@@ -23,71 +32,169 @@
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px; /* Atur ukuran maksimum agar form tidak terlalu lebar */
+        margin-top: 20px;
       }
 
       /* Pengaturan judul form */
       .login-container h2 {
         margin-bottom: 20px;
         text-align: center;
+        font-size: 24px;
+        color: #333;
       }
 
       /* Pengaturan input text dan password */
       .login-container input[type="text"],
       .login-container input[type="password"] {
-        width: 100%; /* Lebar input 100% dari parent container */
-        padding: 10px; /* Padding dalam input */
-        margin: 10px 0; /* Jarak antar input */
-        border: 1px solid #ccc; /* Border abu-abu pada input */
-        border-radius: 4px; /* Membuat sudut input melengkung */
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
       }
 
       /* Pengaturan tombol submit dan reset */
       .login-container input[type="submit"],
       .login-container input[type="reset"] {
-        width: 48%; /* Lebar tombol menjadi 48% agar dua tombol bisa berada dalam satu baris */
-        padding: 10px;
-        border: none; /* Menghilangkan border default pada tombol */
-        border-radius: 4px; /* Membuat sudut tombol melengkung */
-        background-color: #4caf50; /* Warna latar tombol submit hijau */
-        color: white; /* Warna teks tombol putih */
-        cursor: pointer; /* Menampilkan pointer saat tombol di-hover */
+        width: 48%;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
         margin-top: 10px;
+        font-size: 16px;
       }
 
       /* Pengaturan warna tombol reset (warna merah) */
       .login-container input[type="reset"] {
-        background-color: #f44336;
+        background-color: #d4af37;
       }
 
       /* Efek hover saat tombol diklik */
       .login-container input[type="submit"]:hover,
       .login-container input[type="reset"]:hover {
-        opacity: 0.9; /* Mengubah transparansi saat hover */
+        opacity: 0.9;
+      }
+
+      /* Pengaturan layout tombol login dan reset agar sejajar */
+      .login-container .button-group {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Menambahkan margin pada bagian bawah form untuk spacing */
+      .login-container form {
+        margin-bottom: 10px;
+      }
+
+      /* Mengatur tampilan header agar tetap rapi */
+      .container {
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <!-- Container utama untuk form login -->
-    <div class="login-container">
-      <h2>Login</h2>
-      <!-- Form login, method POST digunakan untuk mengirim data secara aman -->
-      <form action="/login" method="POST">
-        <!-- Input username -->
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
-        <!-- Input password -->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-        <!-- Tombol submit dan reset -->
-        <div style="display: flex; justify-content: space-between">
-          <input type="submit" value="Login" />
-          <!-- Tombol submit untuk login -->
-          <input type="reset" value="Reset" />
-          <!-- Tombol reset untuk mengosongkan input -->
-          <input type="Submit" value="Submit" />
-          <!-- Tombol submit untuk login -->
+    <div class="container">
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Tutorial</p>
+          <span>.</span>
         </div>
-      </form>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="index.html" class="nav-link active-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="index.html#about" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="index.html#projects" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list dropdown">
+              <a href="Tutorial.html" class="nav-link"
+                >Tutorial <i class="uil uil-angle-down"></i
+              ></a>
+              <div class="circle"></div>
+              <ul class="dropdown-content">
+                <li>
+                  <a href="table.html" class="nav-link">Cara membuat tabel</a>
+                </li>
+                <li>
+                  <a href="form.html" class="nav-link">Cara membuat form</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav_list">
+              <a href="index.html#contact" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <a
+            href="assets/File/5220311111-CV.pdf"
+            download="CV_DhaniPutra.pdf"
+            class="btn"
+          >
+            Download CV <i class="uil uil-file-alt"></i>
+          </a>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+      <div style="padding-top: 90px; display: flex; justify-content: center">
+        <!-- Container utama untuk form login -->
+        <div class="login-container">
+          <h2>Login</h2>
+          <!-- Form login, method POST digunakan untuk mengirim data secara aman -->
+          <form action="/login" method="POST">
+            <!-- Input username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <!-- Input password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <!-- Tombol submit dan reset -->
+            <div class="button-group">
+              <input type="submit" value="Login" />
+              <input type="reset" value="Reset" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+    <footer style="background-color: aquamarine">
+      <p>
+        Pada form login ini, elemen HTML <code>&lt;form&gt;</code> digunakan
+        untuk menangkap dan mengirimkan data input dari pengguna. Atribut
+        <code>action="/login"</code> menunjukkan bahwa data yang dimasukkan akan
+        dikirim ke URL "/login" saat pengguna mengirimkan form, sementara
+        atribut <code>method="POST"</code> digunakan untuk mengirimkan data
+        secara aman ke server. Form ini terdiri dari dua input utama, yaitu
+        username dan password. Elemen <code>&lt;label&gt;</code> digunakan untuk
+        memberikan label yang deskriptif kepada setiap input, di mana input
+        username menggunakan elemen <code>&lt;input type="text"&gt;</code> dan
+        input password menggunakan elemen
+        <code>&lt;input type="password"&gt;</code>. Keduanya diberi atribut
+        <code>required</code>, yang memastikan bahwa pengguna tidak bisa
+        mengirimkan form tanpa mengisi kedua input tersebut. Di bagian akhir,
+        terdapat dua tombol: tombol "Login" yang dibuat dengan elemen
+        <code>&lt;input type="submit"&gt;</code> untuk mengirimkan form, dan
+        tombol "Reset" dengan elemen
+        <code>&lt;input type="reset"&gt;</code> untuk menghapus semua input yang
+        telah dimasukkan pengguna.
+      </p>
+    </footer>
   </body>
 </html>

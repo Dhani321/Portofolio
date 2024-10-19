@@ -3,65 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
     <title>Basic HTML table</title>
 
     <style>
       /* CSS untuk membuat tabel sederhana */
       table {
         width: 100%;
-        border-collapse: collapse; /* menggabungkan border antar sel*/
+        border-collapse: collapse; /* menggabungkan border antar sel */
+        padding-top: 500px;
       }
       th,
       td {
-        border: 1px solid rgb(230, 8, 8); /* menambahkan border pada setiap sel*/
+        border: 1px solid rgb(230, 8, 8); /* menambahkan border pada setiap sel */
         padding: 8px;
-        text-align: left; /*menyelaraskan text ke kiri*/
+        text-align: left; /* menyelaraskan text ke kiri */
+        color: rgb(0, 255, 94);
       }
       th {
-        background-color: #e4e1aa; /* memberi warna latar pada th*/
+        background-color: #d4af37; /* memberi warna latar pada th */
+        color: rgb(0, 0, 0);
+      }
+      h2 {
+        text-align: center; /* menyelaraskan text ke tengah */
+        margin-top: 50px;
+        color: seashell;
       }
     </style>
   </head>
   <body>
-    <h2>Basic HTML table</h2>
+    <div class="container">
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Tutorial</p>
+          <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="index.html" class="nav-link active-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="index.html#about" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="index.html#projects" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list dropdown">
+              <a href="Tutorial.html" class="nav-link"
+                >Tutorial <i class="uil uil-angle-down"></i
+              ></a>
+              <div class="circle"></div>
+              <ul class="dropdown-content">
+                <li>
+                  <a href="table.html" class="nav-link">Cara membuat tabel</a>
+                </li>
+                <li>
+                  <a href="form.html" class="nav-link">Cara membuat form</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav_list">
+              <a href="index.html#contact" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <a
+            href="assets/File/5220311111-CV.pdf"
+            download="CV_DhaniPutra.pdf"
+            class="btn"
+          >
+            Download CV <i class="uil uil-file-alt"></i>
+          </a>
+        </div>
 
-    <!-- Membuat tabel sederhana-->
-    <table>
-      <thead>
-        <tr>
-          <!-- Membuat header tabel-->
-          <th>First Name</th>
-          <!-- Membuat kolom header-->
-          <th>Last Name</th>
-          <!-- Membuat kolom header-->
-          <th>Age</th>
-          <!-- Membuat kolom header-->
-          <th>Alamat</th>
-          <!-- Membuat kolom header-->
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <!-- Membuat baris tabel-->
-          <td>Dhani</td>
-          <!-- Membuat kolom tabel-->
-          <td>Triyoga</td>
-          <td>20</td>
-          <td>Jepara</td>
-        </tr>
-        <tr>
-          <td>Kane</td>
-          <td>Harry</td>
-          <td>30</td>
-          <td>Surabaya</td>
-        </tr>
-        <tr>
-          <td>Kai</td>
-          <td></td>
-          <td>40</td>
-          <td>Malang</td>
-        </tr>
-      </tbody>
-    </table>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+      <!-- Membuat tabel sederhana-->
+      <div style="padding-top: 80px">
+        <h2>Latihan membuat tabel</h2>
+        <table>
+          <tr>
+            <!-- Membuat header tabel-->
+            <th>First Name</th>
+            <!-- Membuat kolom header-->
+            <th>Last Name</th>
+            <!-- Membuat kolom header-->
+            <th>Age</th>
+            <!-- Membuat kolom header-->
+            <th>Alamat</th>
+            <!-- Membuat kolom header-->
+          </tr>
+          <tr>
+            <td>Dhani</td>
+            <td>Triyoga</td>
+            <td>20</td>
+            <td>Jepara</td>
+          </tr>
+          <tr>
+            <td>Kane</td>
+            <td>Harry</td>
+            <td>30</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Kai</td>
+            <td></td>
+            <td>40</td>
+            <td></td>
+          </tr>
+        </table>
+        <h2>Daftar Mahasiswa</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NIM</th>
+              <th>Nama</th>
+              <th>IPK Semester 1-8</th>
+              <th>Jurusan</th>
+              <th>Fakultas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5220311111</td>
+              <td>Dhani Triyoga Andika Putra</td>
+              <td>4.00</td>
+              <td>Sistem Informasi</td>
+              <td>Fakultas Teknologi Informasi</td>
+            </tr>
+            <tr>
+              <td>5220311112</td>
+              <td>Siti Aisyah</td>
+              <td>3.75</td>
+              <td>Teknik Informatika</td>
+              <td>Fakultas Teknologi Informasi</td>
+            </tr>
+            <tr>
+              <td>5220311113</td>
+              <td>Agus Setiawan</td>
+              <td>3.65</td>
+              <td>Manajemen</td>
+              <td>Fakultas Ekonomi dan Bisnis</td>
+            </tr>
+            <tr>
+              <td>5220311114</td>
+              <td>Nurul Huda</td>
+              <td>3.90</td>
+              <td>Akuntansi</td>
+              <td>Fakultas Ekonomi dan Bisnis</td>
+            </tr>
+            <tr>
+              <td>5220311115</td>
+              <td>Andi Rahmat</td>
+              <td>3.70</td>
+              <td>Ilmu Komunikasi</td>
+              <td>Fakultas Ilmu Sosial dan Politik</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer style="background-color: aquamarine">
+        <p>
+          Untuk membuat tabel di HTML, digunakan elemen &lt;table&gt; yang
+          berfungsi sebagai wadah utama. Di dalam elemen &lt;table&gt;, tabel
+          terdiri dari baris-baris yang dibuat dengan elemen &lt;tr&gt; (table
+          row). Setiap baris berisi sel-sel yang dapat dibuat menggunakan elemen
+          &lt;td&gt; (table data) untuk sel data biasa, atau elemen &lt;th&gt;
+          (table header) untuk sel header yang biasanya digunakan di bagian atas
+          tabel atau sebagai judul kolom. Setiap elemen &lt;th&gt; dan
+          &lt;td&gt; ditempatkan di dalam elemen &lt;tr&gt;, yang masing-masing
+          mewakili satu baris dalam tabel.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
