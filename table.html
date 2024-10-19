@@ -187,18 +187,64 @@
           </tbody>
         </table>
       </div>
+
       <footer style="background-color: aquamarine">
-        <p>
-          Untuk membuat tabel di HTML, digunakan elemen &lt;table&gt; yang
-          berfungsi sebagai wadah utama. Di dalam elemen &lt;table&gt;, tabel
-          terdiri dari baris-baris yang dibuat dengan elemen &lt;tr&gt; (table
-          row). Setiap baris berisi sel-sel yang dapat dibuat menggunakan elemen
-          &lt;td&gt; (table data) untuk sel data biasa, atau elemen &lt;th&gt;
-          (table header) untuk sel header yang biasanya digunakan di bagian atas
-          tabel atau sebagai judul kolom. Setiap elemen &lt;th&gt; dan
-          &lt;td&gt; ditempatkan di dalam elemen &lt;tr&gt;, yang masing-masing
-          mewakili satu baris dalam tabel.
-        </p>
+        <div class="scroll-box">
+          <p>
+            Untuk membuat tabel di HTML, digunakan elemen
+            <code>&lt;table&gt;</code> yang berfungsi sebagai wadah utama. Di
+            dalam elemen <code>&lt;table&gt;</code>, tabel terdiri dari
+            baris-baris yang dibuat dengan elemen <code>&lt;tr&gt;</code> (table
+            row). Setiap baris berisi sel-sel yang dapat dibuat menggunakan
+            elemen <code>&lt;td&gt;</code> (table data) untuk sel data biasa,
+            atau elemen <code>&lt;th&gt;</code> (table header) untuk sel header
+            yang biasanya digunakan di bagian atas tabel atau sebagai judul
+            kolom. Setiap elemen <code>&lt;th&gt;</code> dan
+            <code>&lt;td&gt;</code> ditempatkan di dalam elemen
+            <code>&lt;tr&gt;</code>, yang masing-masing mewakili satu baris
+            dalam tabel.
+          </p>
+
+          <p>
+            Selain itu, Anda juga bisa menambahkan atribut seperti
+            <code>border</code>, <code>cellpadding</code>, dan
+            <code>cellspacing</code> untuk mengatur tampilan tabel, seperti
+            ketebalan garis batas, jarak antara isi sel dengan tepi, dan jarak
+            antar-sel. Sebagai contoh:
+          </p>
+
+          <pre>
+&lt;table border="1" cellpadding="10" cellspacing="0"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;td&gt;Data 3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 4&lt;/td&gt;
+    &lt;td&gt;Data 5&lt;/td&gt;
+    &lt;td&gt;Data 6&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </pre
+          >
+
+          <p>
+            Dalam contoh di atas, tabel memiliki tiga kolom dan dua baris data,
+            serta satu baris header. Atribut <code>border</code> pada elemen
+            <code>&lt;table&gt;</code> digunakan untuk menampilkan garis batas
+            di sekitar sel, sedangkan <code>cellpadding</code> dan
+            <code>cellspacing</code> mengatur jarak di dalam dan antar-sel. Ini
+            adalah cara dasar dalam pembuatan tabel di HTML, yang bisa
+            dikembangkan lebih lanjut dengan tambahan styling dari CSS untuk
+            memberikan tampilan yang lebih menarik.
+          </p>
+        </div>
       </footer>
     </div>
   </body>

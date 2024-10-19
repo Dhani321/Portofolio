@@ -175,26 +175,99 @@
       </div>
     </div>
     <footer style="background-color: aquamarine">
-      <p>
-        Pada form login ini, elemen HTML <code>&lt;form&gt;</code> digunakan
-        untuk menangkap dan mengirimkan data input dari pengguna. Atribut
-        <code>action="/login"</code> menunjukkan bahwa data yang dimasukkan akan
-        dikirim ke URL "/login" saat pengguna mengirimkan form, sementara
-        atribut <code>method="POST"</code> digunakan untuk mengirimkan data
-        secara aman ke server. Form ini terdiri dari dua input utama, yaitu
-        username dan password. Elemen <code>&lt;label&gt;</code> digunakan untuk
-        memberikan label yang deskriptif kepada setiap input, di mana input
-        username menggunakan elemen <code>&lt;input type="text"&gt;</code> dan
-        input password menggunakan elemen
-        <code>&lt;input type="password"&gt;</code>. Keduanya diberi atribut
-        <code>required</code>, yang memastikan bahwa pengguna tidak bisa
-        mengirimkan form tanpa mengisi kedua input tersebut. Di bagian akhir,
-        terdapat dua tombol: tombol "Login" yang dibuat dengan elemen
-        <code>&lt;input type="submit"&gt;</code> untuk mengirimkan form, dan
-        tombol "Reset" dengan elemen
-        <code>&lt;input type="reset"&gt;</code> untuk menghapus semua input yang
-        telah dimasukkan pengguna.
-      </p>
+      <div class="scroll-box">
+        <h3>Penjelasan Pembuatan Form Login</h3>
+        <p>
+          Berikut adalah tutorial pembuatan form login menggunakan HTML
+          berdasarkan kode yang Anda berikan:
+        </p>
+        <p>
+          &lt;div style=&quot;padding-top: 90px; display: flex; justify-content:
+          center&quot;&gt;<br />
+          &lt;!-- Container utama untuk form login --&gt;<br />
+          &lt;div class=&quot;login-container&quot;&gt;<br />
+          &lt;h2&gt;Login&lt;/h2&gt;<br />
+          &lt;!-- Form login, method POST digunakan untuk mengirim data secara
+          aman --&gt;<br />
+          &lt;form action=&quot;/login&quot; method=&quot;POST&quot;&gt;<br />
+          &lt;!-- Input username --&gt;<br />
+          &lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;<br />
+          &lt;input type=&quot;text&quot; id=&quot;username&quot;
+          name=&quot;username&quot; required /&gt;<br />
+          &lt;!-- Input password --&gt;<br />
+          &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;<br />
+          &lt;input type=&quot;password&quot; id=&quot;password&quot;
+          name=&quot;password&quot; required /&gt;<br />
+          &lt;!-- Tombol submit dan reset --&gt;<br />
+          &lt;div class=&quot;button-group&quot;&gt;<br />
+          &lt;input type=&quot;submit&quot; value=&quot;Login&quot; /&gt;<br />
+          &lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;<br />
+          &lt;/div&gt;<br />
+          &lt;/form&gt;<br />
+          &lt;/div&gt;<br />
+          &lt;/div&gt;
+        </p>
+        <h4>Langkah-langkah Pembuatan Form Login</h4>
+        <h4>1. Buat Struktur Dasar HTML</h4>
+        <p>
+          Langkah pertama adalah membuat file HTML dengan struktur dasar.
+          Pastikan file ini dimulai dengan deklarasi
+          <code>&lt;!DOCTYPE html&gt;</code> dan tag pembuka serta penutup HTML.
+        </p>
+
+        <h4>2. Membuat Container Utama</h4>
+        <p>
+          Untuk membuat form login berada di tengah halaman, kita menggunakan
+          elemen <code>&lt;div&gt;</code> dengan properti CSS
+          <code>display: flex;</code> dan <code>justify-content: center;</code>.
+          Ini memposisikan konten form di tengah secara horizontal.
+        </p>
+
+        <h4>3. Menambahkan Form Login</h4>
+        <p>
+          Form login dibuat menggunakan elemen <code>&lt;form&gt;</code> dengan
+          metode <code>POST</code>. Input untuk username dan password dibuat
+          dengan elemen <code>&lt;input&gt;</code>, serta menggunakan atribut
+          <code>required</code> untuk memastikan kolom tersebut harus diisi.
+        </p>
+
+        <h4>4. Menambahkan Tombol Submit dan Reset</h4>
+        <p>
+          Dua tombol dibuat menggunakan elemen <code>&lt;input&gt;</code>, satu
+          untuk submit dan satu lagi untuk reset. Tombol-tombol ini membantu
+          pengguna untuk mengirim atau mereset data yang telah dimasukkan ke
+          dalam form.
+        </p>
+
+        <h4>5. Kesimpulan</h4>
+        <p>
+          Dalam tutorial ini, Anda telah belajar cara membuat form login
+          sederhana dengan HTML dan sedikit styling CSS untuk memperbaiki tata
+          letaknya. Anda bisa menambahkan lebih banyak styling untuk memperindah
+          form ini.
+        </p>
+
+        <p>
+          Pada form login ini, elemen HTML <code>&lt;form&gt;</code> digunakan
+          untuk menangkap dan mengirimkan data input dari pengguna. Atribut
+          <code>action="/login"</code> menunjukkan bahwa data yang dimasukkan
+          akan dikirim ke URL "/login" saat pengguna mengirimkan form, sementara
+          atribut <code>method="POST"</code> digunakan untuk mengirimkan data
+          secara aman ke server. Form ini terdiri dari dua input utama, yaitu
+          username dan password. Elemen <code>&lt;label&gt;</code> digunakan
+          untuk memberikan label yang deskriptif kepada setiap input, di mana
+          input username menggunakan elemen
+          <code>&lt;input type="text"&gt;</code> dan input password menggunakan
+          elemen <code>&lt;input type="password"&gt;</code>. Keduanya diberi
+          atribut <code>required</code>, yang memastikan bahwa pengguna tidak
+          bisa mengirimkan form tanpa mengisi kedua input tersebut. Di bagian
+          akhir, terdapat dua tombol: tombol "Login" yang dibuat dengan elemen
+          <code>&lt;input type="submit"&gt;</code> untuk mengirimkan form, dan
+          tombol "Reset" dengan elemen
+          <code>&lt;input type="reset"&gt;</code> untuk menghapus semua input
+          yang telah dimasukkan pengguna.
+        </p>
+      </div>
     </footer>
   </body>
 </html>
