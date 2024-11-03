@@ -75,10 +75,27 @@
               <div class="circle"></div>
               <ul class="dropdown-content">
                 <li>
-                  <a href="table.html" class="nav-link">Cara membuat tabel</a>
+                  <a href="table.html" class="nav-link"
+                    >Tutorial membuat tabel</a
+                  >
                 </li>
                 <li>
-                  <a href="form.html" class="nav-link">Cara membuat form</a>
+                  <a href="form.html" class="nav-link">Tutorial membuat form</a>
+                </li>
+                <li>
+                  <a href="loc.html" class="nav-link"
+                    >Tutorial API HTML5 Geolocation</a
+                  >
+                </li>
+                <li>
+                  <a href="form.html" class="nav-link"
+                    >Tutorial Membuat Canvas</a
+                  >
+                </li>
+                <li>
+                  <a href="form.html" class="nav-link"
+                    >Tutorial Deploy Web ke Github</a
+                  >
                 </li>
               </ul>
             </li>
@@ -186,6 +203,83 @@
             </tr>
           </tbody>
         </table>
+        <!-- Card Style untuk Latihan Page Margin -->
+        <div class="tutorial-box">
+          <h2>Latihan Page Margin dengan CSS Editor</h2>
+          <p>
+            Latihan untuk mengatur margin, indentasi, dan tata letak halaman
+            menggunakan HTML dan CSS langsung dari editor.
+          </p>
+
+          <h3>HTML & CSS Code:</h3>
+          <textarea
+            class="editor"
+            rows="20"
+            id="contentCode"
+            placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+      /* Dhani Triyoga Andika Putra_5220311111 */
+        /* Mengatur indentasi kiri dan kanan untuk h1 dan h2 */
+        h1, h2 {
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+  
+        /* Mengatur jarak atas dan bawah untuk elemen h1 dan h2 */
+        h1, h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+  
+        /* Mengatur format khusus untuk h2 dengan kelas subsection */
+        h2.subsection {
+            font-style: italic;
+            color: #333;
+        }
+  
+        /* Mengatur indentasi baris pertama untuk paragraf */
+        p {
+            text-indent: 2em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+  
+        /* Preview area styling */
+        .preview {
+            border: 1px solid #ddd;
+            padding: 16px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+  
+    <h1>Judul Halaman (H1)</h1>
+    <h2>Subjudul (H2)</h2>
+    <h2 class="subsection">Sub Bagian (H2 dengan Kelas Subsection)</h2>
+    <p>
+        Ini adalah contoh paragraf pertama untuk latihan indentasi teks. Paragraf ini akan memiliki indentasi khusus di baris pertamanya.
+    </p>
+    <p>
+        Ini adalah contoh paragraf kedua. Setiap paragraf di bawah H1 dan H2 akan mengikuti aturan CSS yang sudah kita tetapkan.
+    </p>
+  
+  </body>
+  </html>
+        </textarea
+          >
+
+          <button class="run-button" onclick="runContentCode()">Run</button>
+          <button class="undo-button" onclick="undoContentCode()">Undo</button>
+
+          <h3>Hasil:</h3>
+          <div class="preview" id="previewContent"></div>
+        </div>
       </div>
 
       <footer style="background-color: aquamarine">

@@ -22,7 +22,32 @@
 
     <title>Tutorial</title>
   </head>
+  <style>
+    h2,p,h3 {
+      color: rgb(255, 255, 255);
+    }
+    /* Preview area styling */
+    .preview {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-top: 10px;
+        }
+        button {
+        background-color: #1db954;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #24914a;
+      }
+  </style>
   <body>
+    
     <div class="container">
       <!-- --------------- HEADER --------------- -->
       <nav id="header">
@@ -33,7 +58,7 @@
         <div class="nav-menu" id="myNavMenu">
           <ul class="nav_menu_list">
             <li class="nav_list">
-              <a href="index.html#home" class="nav-link active-link">Home</a>
+              <a href="index.html#home" class="nav-link">Home</a>
               <div class="circle"></div>
             </li>
             <li class="nav_list">
@@ -46,11 +71,15 @@
             </li> 
             <!-- Dropdown Menu -->
             <li class="nav_list dropdown">
-              <a href="Tutorial.html" class="nav-link">Tutorial <i class="uil uil-angle-down"></i></a>
+              <a href="Tutorial.html" class="nav-link active-link">Tutorial <i class="uil uil-angle-down"></i></a>
               <div class="circle"></div>
               <ul class="dropdown-content">
-                <li><a href="table.html" class="nav-link">Cara membuat tabel</a></li>
-                <li><a href="form.html" class="nav-link">Cara membuat form</a></li>
+                <li><a href="#tabel" class="nav-link" >Tutorial membuat Tabel</a></li>
+                <li><a href="#form" class="nav-link">Tutorial Membuat Form</a></li>
+                <li><a href="#page" class="nav-link">Tutorial Page Margin</a></li>
+                <li><a href="#lokasi" class="nav-link">Tutorial API HTML5 Geolocation</a></li>
+                <li><a href="form.html" class="nav-link">Tutorial Membuat Canvas</a></li>
+                <li><a href="form.html" class="nav-link">Tutorial Deploy Web ke Github</a></li>
               </ul>
             </li>
             <li class="nav_list">
@@ -70,76 +99,502 @@
           <i class="uil uil-bars" onclick="myMenuFunction()"></i>
         </div>
       </nav>
+    </div>
+    
 
-      <!-- -------------- MAIN ---------------- -->
-      <main class="wrapper">
-        <section class="section" id="tutorials">
-          <div class="top-header">
-            <h1>Tutorials</h1>
+    <!-- --------------- TUTORIAL --------------- -->
+           <!-- -------------- MAIN ---------------- -->
+           <main class="wrapper">
+            <section class="section" id="tutorials">
+              <div class="top-header">
+                <h1>Tutorial: CSS Basics</h1>
+              </div>
+             
+    
+              <!-- Card Style untuk Latihan Tabel -->
+              <div class="tutorial-box" id="tabel">
+                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
+                <p>
+                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
+                  menggunakan HTML dan CSS langsung dari editor.
+                </p>
+    
+                <h3>HTML & CSS Code:</h3>
+                <textarea
+                  class="editor"
+                  rows="20"
+                  id="tableCode"
+                  placeholder="Masukkan kode HTML dan CSS di sini"
+                >
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            /* CSS untuk membuat tabel sederhana */
+            table {
+              width: 100%;
+              border-collapse: collapse; /* menggabungkan border antar sel */
+              padding-top: 500px;
+            }
+            th,
+            td {
+              border: 1px solid rgb(230, 8, 8); /* menambahkan border pada setiap sel */
+              padding: 8px;
+              text-align: left; /* menyelaraskan text ke kiri */
+              color: rgb(0, 255, 94);
+            }
+            th {
+              background-color: #d4af37; /* memberi warna latar pada th */
+              color: rgb(0, 0, 0);
+            }
+            h2 {
+              margin-top: 50px;
+              color: seashell;
+            }
+          </style>
+        </head>
+        <body>
+         <!-- Membuat tabel sederhana-->
+         <div style="padding-top: 80px">
+          <h2>Latihan membuat tabel</h2>
+          <table>
+            <tr>
+              <!-- Membuat header tabel-->
+              <th>First Name</th>
+              <!-- Membuat kolom header-->
+              <th>Last Name</th>
+              <!-- Membuat kolom header-->
+              <th>Age</th>
+              <!-- Membuat kolom header-->
+              <th>Alamat</th>
+              <!-- Membuat kolom header-->
+            </tr>
+            <tr>
+              <td>Dhani</td>
+              <td>Triyoga</td>
+              <td>20</td>
+              <td>Jepara</td>
+            </tr>
+            <tr>
+              <td>Kane</td>
+              <td>Harry</td>
+              <td>30</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Kai</td>
+              <td></td>
+              <td>40</td>
+              <td></td>
+            </tr>
+          </table>
+          <h2>Daftar Mahasiswa</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>IPK Semester 1-8</th>
+                <th>Jurusan</th>
+                <th>Fakultas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5220311111</td>
+                <td>Dhani Triyoga Andika Putra</td>
+                <td>4.00</td>
+                <td>Sistem Informasi</td>
+                <td>Fakultas Teknologi Informasi</td>
+              </tr>
+              <tr>
+                <td>5220311112</td>
+                <td>Siti Aisyah</td>
+                <td>3.75</td>
+                <td>Teknik Informatika</td>
+                <td>Fakultas Teknologi Informasi</td>
+              </tr>
+              <tr>
+                <td>5220311113</td>
+                <td>Agus Setiawan</td>
+                <td>3.65</td>
+                <td>Manajemen</td>
+                <td>Fakultas Ekonomi dan Bisnis</td>
+              </tr>
+              <tr>
+                <td>5220311114</td>
+                <td>Nurul Huda</td>
+                <td>3.90</td>
+                <td>Akuntansi</td>
+                <td>Fakultas Ekonomi dan Bisnis</td>
+              </tr>
+              <tr>
+                <td>5220311115</td>
+                <td>Andi Rahmat</td>
+                <td>3.70</td>
+                <td>Ilmu Komunikasi</td>
+                <td>Fakultas Ilmu Sosial dan Politik</td>
+              </tr>
+            </tbody>
+          </table>
+        </body>
+        </html>
+              </textarea
+                >
+    
+                <button class="run-button" onclick="runTableCode()">Run</button>
+                <button class="undo-button" onclick="undoTableCode()">Undo</button>
+    
+                <h3>Hasil:</h3>
+                <div class="preview" id="previewTable"></div>
+              </div>
+    
+              <!-- Card Style untuk Latihan Form -->
+              <div class="tutorial-box" id="form">
+                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
+                <p>
+                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
+                  menggunakan HTML dan CSS langsung dari editor.
+                </p>
+    
+                <h3>HTML & CSS Code:</h3>
+                <textarea
+                  class="editor"
+                  rows="20"
+                  id="formCode"
+                  placeholder="Masukkan kode HTML dan CSS di sini"
+                >
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            /* Pengaturan tampilan body agar form berada di tengah halaman */
+      
+            /* Pengaturan container form login */
+            .login-container {
+              background-color: white;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              width: 100%;
+              max-width: 400px; /* Atur ukuran maksimum agar form tidak terlalu lebar */
+              margin-top: 20px;
+            }
+      
+            /* Pengaturan judul form */
+            .login-container h2 {
+              margin-bottom: 20px;
+              text-align: center;
+              font-size: 24px;
+              color: #333;
+            }
+      
+            /* Pengaturan input text dan password */
+            .login-container input[type="text"],
+            .login-container input[type="password"] {
+              width: 100%;
+              padding: 12px;
+              margin: 8px 0;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              font-size: 16px;
+            }
+      
+            /* Pengaturan tombol submit dan reset */
+            .login-container input[type="submit"],
+            .login-container input[type="reset"] {
+              width: 48%;
+              padding: 12px;
+              border: none;
+              border-radius: 4px;
+              background-color: #4caf50;
+              color: white;
+              cursor: pointer;
+              margin-top: 10px;
+              font-size: 16px;
+            }
+      
+            /* Pengaturan warna tombol reset (warna merah) */
+            .login-container input[type="reset"] {
+              background-color: #d4af37;
+            }
+      
+            /* Efek hover saat tombol diklik */
+            .login-container input[type="submit"]:hover,
+            .login-container input[type="reset"]:hover {
+              opacity: 0.9;
+            }
+      
+            /* Pengaturan layout tombol login dan reset agar sejajar */
+            .login-container .button-group {
+              display: flex;
+              justify-content: space-between;
+            }
+      
+            /* Menambahkan margin pada bagian bawah form untuk spacing */
+            .login-container form {
+              margin-bottom: 10px;
+            }
+      
+            /* Mengatur tampilan header agar tetap rapi */
+            .container {
+              width: 100%;
+            }
+          </style>
+        </head>
+        <body>
+          <div style="padding-top: 90px; display: flex; justify-content: center">
+            <!-- Container utama untuk form login -->
+            <div class="login-container">
+              <h2>Login</h2>
+              <!-- Form login, method POST digunakan untuk mengirim data secara aman -->
+              <form action="/login" method="POST">
+                <!-- Input username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required />
+                <!-- Input password -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+                <!-- Tombol submit dan reset -->
+                <div class="button-group">
+                  <input type="submit" value="Login" />
+                  <input type="reset" value="Reset" />
+                </div>
+              </form>
+            </div>
           </div>
+    
+        </body>
+        </html>
+              </textarea
+                >
+    
+                <button class="run-button" onclick="runFormCode()">Run</button>
+                <button class="undo-button" onclick="undoFormCode()">Undo</button>
+    
+                <h3>Hasil:</h3>
+                <div class="preview" id="previewForm"></div>
+              </div>
 
-          <!-- Tutorial Links -->
-          <div class="project-container">
-            <!-- Tutorial Form -->
-            <div class="project-box" onClick="window.location.href='form.html'">
-              <i class="uil uil-file-alt"></i>
-              <h3>Form Tutorial</h3>
-              <label>Learn how to build forms with HTML</label>
-            </div>
-            <div
-              class="project-box"onClick="window.location.href='loc.html'">
-              <i class="uil-location-point"></i>
-              <h3>Tutorial HTML5 API Geolocation</h3>
-              <label>Learn how to build website using HTML5</label>
-            </div>
-            <!-- Tutorial Tabel -->
+               <!-- Card Style untuk Latihan Page Margin -->
+               <div class="tutorial-box" id="page">
+                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
+                <p>
+                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
+                  menggunakan HTML dan CSS langsung dari editor.
+                </p>
+    
+                <h3>HTML & CSS Code:</h3>
+                <textarea
+                  class="editor"
+                  rows="20"
+                  id="contentCode"
+                  placeholder="Masukkan kode HTML dan CSS di sini"
+                >
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          /* Dhani Triyoga Andika Putra_5220311111 */
+            /* Mengatur indentasi kiri dan kanan untuk h1 dan h2 */
+            h1,h2{
+                margin-left: 0em;
+                margin-right: 0em;
+            }
+        
+      
+            /* Mengatur jarak atas dan bawah untuk elemen h1 dan h2 */
+            h1, h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+      
+            /* Mengatur format khusus untuk h2 dengan kelas subsection */
+            h2.subsection {
+                font-style: italic;
+                color: #333;
+            }
+      
+            /* Mengatur indentasi baris pertama untuk paragraf */
+            p {
+                text-indent: 2em;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+      
             
-            <div class="project-box" onClick="window.location.href='table.html'">
-              <i class="uil uil-table"></i>
-              <h3>Tabel Tutorial</h3>
-              <label>Master creating and styling tables in HTML</label>
-            </div>
-          </div>
-        </section>
-      </main>
+        </style>
+      </head>
+      <body>
+      <div>
+        <h1>Judul Halaman (H1)</h1>
+        <h2>Subjudul (H2)</h2>
+        <h2 class="subsection">Sub Bagian (H2 dengan Kelas Subsection)</h2>
+        <p>
+            Ini adalah contoh paragraf pertama untuk latihan indentasi teks. Paragraf ini akan memiliki indentasi khusus di baris pertamanya.
+        </p>
+        <p>
+            Ini adalah contoh paragraf kedua. Setiap paragraf di bawah H1 dan H2 akan mengikuti aturan CSS yang sudah kita tetapkan.
+        </p>
+      </div>
+      </body>
+      </html>
+            </textarea
+                >
+    
+                <button class="run-button" onclick="runContentCode()">Run</button>
+                <button class="undo-button" onclick="undoContentCode()">
+                  Undo
+                </button>
+    
+                <h3>Hasil:</h3>
+                <div class="preview" id="previewContent" style="background-color: #d4af37;"></div>
+              </div>
 
-      --------------- FOOTER ---------------
-      <footer>
-        <div class="top-footer">
-          <!-- <p>Tutorial</p> -->
-        </div>
-        <div class="middle-footer">
-          <ul class="footer-menu">
-            <li class="footer_menu_list">
-              <a href="#home">Home</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#about">About</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#projects">Projects</a>
-            </li>
-            <li class="footer_menu_list">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-social-icons">
-          <div class="icon"><i class="uil uil-instagram"></i></div>
-          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-          <div class="icon"><i class="uil uil-dribbble"></i></div>
-          <div class="icon"><i class="uil uil-github-alt"></i></div>
-        </div>
-        <div class="bottom-footer">
-          <p>
-            Copyright &copy;
-            <a href="#home" style="text-decoration: none">Nicholas</a> - All
-            rights reserved
-          </p>
-        </div>
-      </footer>
+
+               <!-- Card Style untuk lokasi -->
+               <div class="tutorial-box" id="lokasi">
+                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
+                <p>
+                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
+                  menggunakan HTML dan CSS langsung dari editor.
+                </p>
+    
+                <h3>HTML & CSS Code:</h3>
+                <textarea
+                  class="editor"
+                  rows="20"
+                  id="locCode"
+                  placeholder="Masukkan kode HTML dan CSS di sini"
+                >
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+       /* Location result box */
+        /* Container for content */
+        .container2 {
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        padding-top: 100px;
+        
+        
+      }
+    
+
+     
+
+      /* Location result box */
+      #location {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #d4af37;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        display: none;
+      }
+          </style>
+        </head>
+        <body>
+        <!-- location -->
+    <div class="container2">
+      <h1>Get User Location with Geolocation API</h1>
+      <button onclick="getLocation()">Get Location</button>
+
+      <div id="location">
+        <h3>Your Location:</h3>
+        <p>Latitude: <span id="latitude"></span></p>
+        <p>Longitude: <span id="longitude"></span></p>
+        <p>Accuracy: <span id="accuracy"></span> meters</p>
+      </div>
     </div>
 
+    <script>
+      // Function to get user location
+      function getLocation() {
+        const locationBox = document.getElementById("location");
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+
+        // Add loading effect to the button
+        const button = document.querySelector("button");
+        button.innerHTML = "Getting Location...";
+        button.disabled = true;
+        button.style.backgroundColor = "#ccc";
+      }
+
+      // Function to display position
+      function showPosition(position) {
+        document.getElementById("latitude").innerHTML =
+          position.coords.latitude;
+        document.getElementById("longitude").innerHTML =
+          position.coords.longitude;
+        document.getElementById("accuracy").innerHTML =
+          position.coords.accuracy + " meters";
+
+        // Show the location div
+        const locationBox = document.getElementById("location");
+        locationBox.style.display = "block";
+
+        // Revert button state
+        const button = document.querySelector("button");
+        button.innerHTML = "Get Location";
+        button.disabled = false;
+        button.style.backgroundColor = "#007bff";
+      }
+
+      // Function to handle errors
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+        }
+
+        // Revert button state even in case of an error
+        const button = document.querySelector("button");
+        button.innerHTML = "Get Location";
+        button.disabled = false;
+        button.style.backgroundColor = "#007bff";
+      }
+    </script>
+
+        </body>
+        </html>
+              </textarea
+                >
+    
+                <button class="run-button" onclick="runLocCode()">Run</button>
+                <button class="undo-button" onclick="undoLocCode()">Undo</button>
+    
+                <h3>Hasil:</h3>
+                <div class="preview" id="previewLoc"></div>
+              </div>
+    
+            </section>
+          </main>
+    
+  </body>
+  </html>
+
+  
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
