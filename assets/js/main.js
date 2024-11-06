@@ -261,3 +261,49 @@ function showError(error) {
   button.disabled = false;
   button.style.backgroundColor = "#007bff";
 }
+
+// <!-- Main JavaScript -->
+// Function to run code in the editor
+function runCode(editorId) {
+  // Get values from HTML, CSS, and JS text areas for each editor
+  const htmlCode = document.getElementById("htmlCode" + editorId).value;
+  const cssCode = `<style>${
+    document.getElementById("cssCode" + editorId).value
+  }</style>`;
+  const jsCode = `<script>${
+    document.getElementById("jsCode" + editorId).value
+  }<\/script>`;
+
+  // Create a complete HTML content with CSS and JS
+  const outputContent = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      ${cssCode}
+    </head>
+    <body>
+      ${htmlCode}
+      ${jsCode}
+    </body>
+    </html>
+  `;
+
+  // Update iframe content with the new HTML, CSS, and JS code
+  const iframe = document.getElementById("outputFrame" + editorId).contentWindow
+    .document;
+  iframe.open();
+  iframe.write(outputContent);
+  iframe.close();
+}
+
+function clearCode(editorId) {
+  // Clear the HTML, CSS, and JavaScript input areas and output frame for each editor
+  document.getElementById("htmlCode" + editorId).value = "";
+  document.getElementById("cssCode" + editorId).value = "";
+  document.getElementById("jsCode" + editorId).value = "";
+  document.getElementById(
+    "outputFrame" + editorId
+  ).contentWindow.document.body.innerHTML = "";
+}

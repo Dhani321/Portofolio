@@ -19,6 +19,56 @@
       href="assets/images/favicon.png"
       type="image/x-icon"
     />
+    <style>
+.certificates-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certificate-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Warna background */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.certificate-details {
+  flex-grow: 1;
+}
+
+.certificate-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  color: #000000;
+}
+
+.certificate-description {
+  font-size: 0.9em;
+  margin: 5px 0 0;
+  color: #000000;
+}
+
+.view-button {
+  background-color: #d4af37; /* Warna tombol */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.view-button:hover {
+  background-color: #1db954; /* Warna tombol saat hover */
+}
+
+    </style>
 
     <title>Portfolio</title>
   </head>
@@ -44,16 +94,21 @@
               <a href="#projects" class="nav-link">Projects</a>
               <div class="circle"></div>
             </li>
+            <li class="nav_list">
+              <a href="#Certificate" class="nav-link">Certificate</a>
+              <div class="circle"></div>
+            </li>
             <!-- Dropdown Menu -->
             <li class="nav_list dropdown">
               <a href="Tutorial.html" class="nav-link">Tutorial <i class="uil uil-angle-down"></i></a>
               <div class="circle"></div>
               <ul class="dropdown-content">
-                <li><a href="table.html" class="nav-link">Tutorial membuat tabel</a></li>
-                <li><a href="form.html" class="nav-link">Tutorial membuat form</a></li>
-                <li><a href="loc.html" class="nav-link">Tutorial API HTML5 Geolocation</a></li>
-                <li><a href="form.html" class="nav-link">Tutorial Membuat Canvas</a></li>
-                <li><a href="form.html" class="nav-link">Tutorial Deploy Web ke Github</a></li>
+                <li><a href="Tutorial.html#table" class="nav-link">Tutorial membuat tabel</a></li>
+                <li><a href="Tutorial.html#form" class="nav-link">Tutorial membuat form</a></li>
+                <li><a href="Tutorial.html#margin" class="nav-link">Tutorial Page Margin</a></li>
+                <li><a href="Tutorial.html#lokasi" class="nav-link">Tutorial API HTML5 Geolocation</a></li>
+                <li><a href="Tutorial.html#canvas" class="nav-link">Tutorial Membuat Canvas</a></li>
+                <li><a href="Tutorial.html#deploy" class="nav-link">Tutorial Deploy Web ke Github</a></li>
               </ul>
             </li>
             <li class="nav_list">
@@ -87,10 +142,10 @@
             </div>
             <div class="featured-text-info">
               <p>
-                "I am a web developer dedicated to creating clean, efficient,
-                and visually appealing websites. With a focus on both
-                functionality and design, I build solutions that offer seamless
-                user experiences."
+                "Saya seorang pengembang web yang berdedikasi untuk
+                 menciptakan situs web yang bersih, efisien, dan menarik secara 
+                 visual. Dengan fokus pada fungsionalitas dan desain, 
+                saya membangun solusi yang menawarkan pengalaman pengguna yang lancar."
               </p>
             </div>
             <div class="featured-text-btn">
@@ -101,12 +156,7 @@
                 </a>
               
             </div>
-            <div class="social_icons">
-              <div class="icon"><i class="uil uil-instagram"></i></div>
-              <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-              <div class="icon"><i class="uil uil-dribbble"></i></div>
-              <div class="icon"><i class="uil uil-github-alt"></i></div>
-            </div>
+           
           </div>
           <div class="featured-image">
             <div class="image">
@@ -130,14 +180,14 @@
               <div class="about-info">
                 <h3>My introduction</h3>
                 <p>
-                  "I am a web developer skilled in creating web applications
-                  using Laravel and building hybrid mobile apps. My experience
-                  includes developing interactive websites and dynamic
-                  applications. For my undergraduate final project, I developed
-                  a chat application, and during my internship, I worked on APIs
-                  for two mobile providers. I have also served as a teaching
-                  assistant, refining my skills through various personal
-                  projects.
+                  Saya saat ini adalah mahasiswa semester lima jurusan Sistem Informasi di Universitas Teknologi Yogyakarta,
+                   dengan spesialisasi di bidang Manajemen WEB Teknologi Informasi.
+
+                  Saya memiliki ketertarikan dalam pengembangan web, machine learning, dan analisis data.
+                   Saya telah mengerjakan berbagai proyek, seperti situs Tour and Travel, situs E-Commerce, dan desain Android.
+                  
+                  Saya juga memiliki beberapa sertifikasi, Saya berkomitmen untuk memanfaatkan teknologi dalam memecahkan 
+                  tantangan dunia nyata, dan selalu bersemangat untuk terus belajar dan berkembang di bidang ini.
                 </p>
                 <div class="about-btn">
                   <button class="btn">
@@ -158,9 +208,7 @@
                   <span>CSS</span>
                   <span>Bootstrap</span>
                   <span>JavaScript</span>
-                  <span>Vue</span>
-                  <span>React</span>
-                  <span>Angular</span>
+                
                 </div>
               </div>
               <div class="skills-box">
@@ -180,8 +228,7 @@
                 </div>
                 <div class="skills-list">
                   <span>MySQL</span>
-                  <span>PostgreSQL</span>
-                  <span>MongoDB</span>
+                 
                 </div>
               </div>
             </div>
@@ -189,45 +236,114 @@
         </section>
 
         <!-- -------------- PROJECT BOX ---------------- -->
-
         <section class="section" id="projects">
           <div class="top-header">
             <h1>Projects</h1>
           </div>
           <div class="project-container">
-            <div
-              class="project-box"
-              onClick="window.location.href='https://github.com/Dhani321/Travel-Ticket?files=1'"
-            >
+            <div class="project-box" onClick="window.location.href='https://github.com/Dhani321/Travel-Ticket?files=1'">
               <i class="uil uil-bus-alt"></i>
               <h3>Tour and Travel Web</h3>
-              <label>beautiful and responsive  </label>
+              <label>beautiful and responsive</label>
             </div>
-            <div
-              class="project-box"
-              onClick="window.open('https://www.figma.com/proto/ckN13m2ZsVcqWOmXYWHiUA/blue-lagoon?node-id=3-10&starting-point-node-id=3%3A10&t=HHu9lHpUKtb7xzyR-1', '_blank')"
-            >
+            <div class="project-box" onClick="window.open('https://www.figma.com/proto/ckN13m2ZsVcqWOmXYWHiUA/blue-lagoon?node-id=3-10&starting-point-node-id=3%3A10&t=HHu9lHpUKtb7xzyR-1', '_blank')">
               <i class="uil uil-user-check"></i>
               <h3>Web Design</h3>
               <label>Design WEB Pariwisata</label>
             </div>
-            <div class="project-box"
-            onClick="window.open('https://github.com/Dhani321/Ecommerce', '_blank')"
-            >
+            <div class="project-box" onClick="window.open('https://github.com/Dhani321/Ecommerce', '_blank')">
               <i class="uil uil-comment-heart"></i>
               <h3>E-Commerce Website</h3>
               <label>Simple and Secure</label>
             </div>
-            <div class="project-box" 
-            onClick="window.open('https://www.figma.com/design/M9Sges508iy5fjUyPbNCBU/Implementasi-Android-Toko-PS?node-id=1-4&t=lVstKjuWIP6G5UwV-1', '_blank')"
-            >
-              <i class="uil uil-comment-heart"></i>
+            <div class="project-box" onClick="window.open('https://www.figma.com/design/M9Sges508iy5fjUyPbNCBU/Implementasi-Android-Toko-PS?node-id=1-4&t=lVstKjuWIP6G5UwV-1', '_blank')">
+              <i class="uil uil-user-check"></i>
               <h3>Android Design</h3>
               <label>Ecommerce Playstation</label>
             </div>
+
+            <div class="project-box" onClick="window.open('https://dhani321.github.io/Furniture/', '_blank')">
+              <i class="uil uil-comment-heart"></i>
+              <h3>Furniture Web</h3>
+              <label>Ecommerce Furniture</label>
+            </div>
+
+            
           </div>
         </section>
 
+                <!-- -------------- Sertificate BOX ---------------- -->
+                <section class="section" id="Certificate">
+                  <div class="top-header">
+                    <h1>Certificate</h1>
+                    <div class="certificates-section">
+                      <div class="certificate-card">
+                        <div class="certificate-details">
+                          <h3 class="certificate-title">Certificate SQL</h3>
+                          <p class="certificate-description">Ikut serta berpartisipasi kelas sql di HackerRank</p>
+                        </div>
+                        <a href="assets/File/5220311111_Dhani Triyoga Andika Putra_Sertifikat SQL-.pdf"class="view-button">
+                          Lihat 
+                        </a>
+                      </div>
+                    
+                      <div class="certificate-card">
+                        <div class="certificate-details">
+                          <h3 class="certificate-title">Sertificate MTCNA</h3>
+                          <p class="certificate-description">Lolos tes MTCNA pada 01/21/2021</p>
+                        </div>
+                        <a href="assets/File/DOC-20220202-WA0000..pdf"class="view-button">
+                          Lihat 
+                        </a>
+                      </div>
+                    
+                      <div class="certificate-card">
+                        <div class="certificate-details">
+                          <h3 class="certificate-title">Sertificate Rapidminer</h3>
+                          <p class="certificate-description">Lolos Data Enginering Professional Certification</p>
+                        </div>
+                        <a href="assets/File/dhani-triyoga-andika-putra-012ca61e-bee4-4eb9-aa97-bce89eae8934-certificate.pdf"class="view-button">
+                          Lihat 
+                        </a>
+                      </div>
+
+                      <div class="certificate-card">
+                        <div class="certificate-details">
+                          <h3 class="certificate-title">Sertificate Samsung Innovation</h3>
+                          <p class="certificate-description">Lolos sampai akhir mengikuti kelas yang diadakan dari Samsung</p>
+                        </div>
+                        <a href="assets/File/Sertifikat Stage 1 - Samsung Innovation Campus Batch 5 (2023-2024).pdf"class="view-button">
+                          Lihat 
+                        </a>
+                      </div>
+
+                      <div class="certificate-card">
+                        <div class="certificate-details">
+                          <h3 class="certificate-title">Certificate Phyton Dasar</h3>
+                          <p class="certificate-description">Lolos tes sertifikasi Phyton Dasar</p>
+                        </div>
+                        <a href="assets/File/Skilvul-SkilBadge-Python Dasar.pdf"class="view-button">
+                          Lihat 
+                        </a>
+                      </div>
+
+                      <div class="certificate-card">
+                        <div class="certificate-details">
+                          <h3 class="certificate-title">Certificate Phyton Dasar</h3>
+                          <p class="certificate-description">Lolos tes sertifikasi Phyton Lanjutan</p>
+                        </div>
+                        <a href="assets/File/Skilvul-SkilBadge-Python Lanjutan.pdf"class="view-button">
+                          Lihat 
+                        </a>
+                      </div>
+                    
+                    </div>
+                    
+        
+                    
+                  </div>
+                </section>
+        
         <!-- -------------- CONTACT BOX ---------------- -->
 
         <section class="section" id="contact">
@@ -237,11 +353,10 @@
           </div>
           <div class="row">
             <div class="col">
-              <div class="contact-info">
+              <div class="contact-info" onClick="window.open('https://wa.me/+6282220436043', '_blank')">
                 
                 <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                <p><i class="uil uil-envelope"></i> Email:</p>
-                <p><i class="uil uil-phone"></i> Call/Whatsapp :</p>
+                <p><i class="uil uil-phone" ></i> Call/Whatsapp :</p>
                 
               </div>
             </div>
@@ -281,6 +396,9 @@
             </li>
             <li class="footer_menu_list">
               <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#Certificate">Certificate</a>
             </li>
             <li class="footer_menu_list">
               <a href="#contact">Contact</a>

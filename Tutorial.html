@@ -69,6 +69,10 @@
               <a href="index.html#projects" class="nav-link">Projects</a>
               <div class="circle"></div>
             </li> 
+            <li class="nav_list">
+              <a href="index.html#certificate" class="nav-link">Certificate</a>
+              <div class="circle"></div>
+            </li> 
             <!-- Dropdown Menu -->
             <li class="nav_list dropdown">
               <a href="Tutorial.html" class="nav-link active-link">Tutorial <i class="uil uil-angle-down"></i></a>
@@ -76,10 +80,10 @@
               <ul class="dropdown-content">
                 <li><a href="#tabel" class="nav-link" >Tutorial membuat Tabel</a></li>
                 <li><a href="#form" class="nav-link">Tutorial Membuat Form</a></li>
-                <li><a href="#page" class="nav-link">Tutorial Page Margin</a></li>
+                <li><a href="#margin" class="nav-link">Tutorial Page Margin</a></li>
                 <li><a href="#lokasi" class="nav-link">Tutorial API HTML5 Geolocation</a></li>
-                <li><a href="form.html" class="nav-link">Tutorial Membuat Canvas</a></li>
-                <li><a href="form.html" class="nav-link">Tutorial Deploy Web ke Github</a></li>
+                <li><a href="#canvas" class="nav-link">Tutorial Membuat Canvas</a></li>
+                <li><a href="#deploy" class="nav-link">Tutorial Deploy Web ke Github</a></li>
               </ul>
             </li>
             <li class="nav_list">
@@ -105,403 +109,494 @@
     <!-- --------------- TUTORIAL --------------- -->
            <!-- -------------- MAIN ---------------- -->
            <main class="wrapper">
-            <section class="section" id="tutorials">
+            <section class="section" id="tabel">
               <div class="top-header">
-                <h1>Tutorial: CSS Basics</h1>
+                <h1 style="padding-top: 50px;">Tutorial: HTML, CSS, JavaScript</h1>
               </div>
              
     
-              <!-- Card Style untuk Latihan Tabel -->
-              <div class="tutorial-box" id="tabel">
-                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
-                <p>
-                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
-                  menggunakan HTML dan CSS langsung dari editor.
-                </p>
+
+
+              <!-- Card Style untuk Tabel -->
+              <main class="wrapper">
+                <section class="section" id="codeZone2">
+                  <div class="tutorial-box">
+                    <h2>Live HTML, CSS, and JavaScript Editor (Tabel)</h2>
+                    <p>
+                      Input your HTML, CSS, and JavaScript code below and see the result
+                      instantly.
+                    </p>
+                  
+                    <!-- HTML Editor -->
+                    <div class="code-editor">
+                      <h3>HTML</h3>
+                      <textarea
+                        id="htmlCode2"
+                        placeholder="Write your HTML here..."
+                        rows="5"
+                      >
+                      <div style="padding-top: 80px">
+                        <h2>Latihan membuat tabel</h2>
+                        <table>
+                          <tr>
+                            <!-- Membuat header tabel-->
+                            <th>First Name</th>
+                            <!-- Membuat kolom header-->
+                            <th>Last Name</th>
+                            <!-- Membuat kolom header-->
+                            <th>Age</th>
+                            <!-- Membuat kolom header-->
+                            <th>Alamat</th>
+                            <!-- Membuat kolom header-->
+                          </tr>
+                          <tr>
+                            <td>Dhani</td>
+                            <td>Triyoga</td>
+                            <td>20</td>
+                            <td>Jepara</td>
+                          </tr>
+                          <tr>
+                            <td>Kane</td>
+                            <td>Harry</td>
+                            <td>30</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>Kai</td>
+                            <td></td>
+                            <td>40</td>
+                            <td></td>
+                          </tr>
+                        </table>
+                        <h2>Daftar Mahasiswa</h2>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>NIM</th>
+                              <th>Nama</th>
+                              <th>IPK Semester 1-8</th>
+                              <th>Jurusan</th>
+                              <th>Fakultas</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>5220311111</td>
+                              <td>Dhani Triyoga Andika Putra</td>
+                              <td>4.00</td>
+                              <td>Sistem Informasi</td>
+                              <td>Fakultas Teknologi Informasi</td>
+                            </tr>
+                            <tr>
+                              <td>5220311112</td>
+                              <td>Siti Aisyah</td>
+                              <td>3.75</td>
+                              <td>Teknik Informatika</td>
+                              <td>Fakultas Teknologi Informasi</td>
+                            </tr>
+                            <tr>
+                              <td>5220311113</td>
+                              <td>Agus Setiawan</td>
+                              <td>3.65</td>
+                              <td>Manajemen</td>
+                              <td>Fakultas Ekonomi dan Bisnis</td>
+                            </tr>
+                            <tr>
+                              <td>5220311114</td>
+                              <td>Nurul Huda</td>
+                              <td>3.90</td>
+                              <td>Akuntansi</td>
+                              <td>Fakultas Ekonomi dan Bisnis</td>
+                            </tr>
+                            <tr>
+                              <td>5220311115</td>
+                              <td>Andi Rahmat</td>
+                              <td>3.70</td>
+                              <td>Ilmu Komunikasi</td>
+                              <td>Fakultas Ilmu Sosial dan Politik</td>
+                            </tr>
+                          </tbody>
+                        </table></textarea>
+                    </div>
+        
+                    <!-- CSS Editor -->
+                    <div class="code-editor">
+                      <h3>CSS</h3>
+                      <textarea
+                        id="cssCode2"
+                        placeholder="Write your CSS here..."
+                        rows="5"
+                      >
+                      <style>
+                      table {
+                        width: 100%;
+                        border-collapse: collapse; /* menggabungkan border antar sel */
+                        padding-top: 500px;
+                      }
+                      th,
+                      td {
+                        border: 1px solid rgb(230, 8, 8); /* menambahkan border pada setiap sel */
+                        padding: 8px;
+                        text-align: left; /* menyelaraskan text ke kiri */
+                        color: rgb(0, 255, 94);
+                      }
+                      th {
+                        background-color: #d4af37; /* memberi warna latar pada th */
+                        color: rgb(0, 0, 0);
+                      }
+                      h2 {
+                        margin-top: 50px;
+                        color: seashell;
+                      }
+                    </style>
+                    </textarea>
+                    </div>
+        
+                    <!-- JavaScript Editor -->
+                    <div class="code-editor">
+                      <h3>JavaScript</h3>
+                      <textarea
+                        id="jsCode2"
+                        placeholder="Write your JavaScript here..."
+                        rows="5"
+                      ></textarea>
+                    </div>
+        
+                    <button class="run-button" onclick="runCode('2')">Run Code</button>
+                    <button class="undo-button" onclick="clearCode('2')">
+                      Clear Code
+                    </button>
+        
+                    <h3>Output:</h3>
+                    <iframe
+                      id="outputFrame2"
+                      class="preview"
+                      title="Code Output"
+                    ></iframe>
+                  </div>
+                </section>
+              </main>
+
+              <!-- Card Style untuk Form -->
     
-                <h3>HTML & CSS Code:</h3>
-                <textarea
-                  class="editor"
-                  rows="20"
-                  id="tableCode"
-                  placeholder="Masukkan kode HTML dan CSS di sini"
-                >
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            /* CSS untuk membuat tabel sederhana */
-            table {
-              width: 100%;
-              border-collapse: collapse; /* menggabungkan border antar sel */
-              padding-top: 500px;
-            }
-            th,
-            td {
-              border: 1px solid rgb(230, 8, 8); /* menambahkan border pada setiap sel */
-              padding: 8px;
-              text-align: left; /* menyelaraskan text ke kiri */
-              color: rgb(0, 255, 94);
-            }
-            th {
-              background-color: #d4af37; /* memberi warna latar pada th */
-              color: rgb(0, 0, 0);
-            }
-            h2 {
-              margin-top: 50px;
-              color: seashell;
-            }
-          </style>
-        </head>
-        <body>
-         <!-- Membuat tabel sederhana-->
-         <div style="padding-top: 80px">
-          <h2>Latihan membuat tabel</h2>
-          <table>
-            <tr>
-              <!-- Membuat header tabel-->
-              <th>First Name</th>
-              <!-- Membuat kolom header-->
-              <th>Last Name</th>
-              <!-- Membuat kolom header-->
-              <th>Age</th>
-              <!-- Membuat kolom header-->
-              <th>Alamat</th>
-              <!-- Membuat kolom header-->
-            </tr>
-            <tr>
-              <td>Dhani</td>
-              <td>Triyoga</td>
-              <td>20</td>
-              <td>Jepara</td>
-            </tr>
-            <tr>
-              <td>Kane</td>
-              <td>Harry</td>
-              <td>30</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Kai</td>
-              <td></td>
-              <td>40</td>
-              <td></td>
-            </tr>
-          </table>
-          <h2>Daftar Mahasiswa</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>NIM</th>
-                <th>Nama</th>
-                <th>IPK Semester 1-8</th>
-                <th>Jurusan</th>
-                <th>Fakultas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>5220311111</td>
-                <td>Dhani Triyoga Andika Putra</td>
-                <td>4.00</td>
-                <td>Sistem Informasi</td>
-                <td>Fakultas Teknologi Informasi</td>
-              </tr>
-              <tr>
-                <td>5220311112</td>
-                <td>Siti Aisyah</td>
-                <td>3.75</td>
-                <td>Teknik Informatika</td>
-                <td>Fakultas Teknologi Informasi</td>
-              </tr>
-              <tr>
-                <td>5220311113</td>
-                <td>Agus Setiawan</td>
-                <td>3.65</td>
-                <td>Manajemen</td>
-                <td>Fakultas Ekonomi dan Bisnis</td>
-              </tr>
-              <tr>
-                <td>5220311114</td>
-                <td>Nurul Huda</td>
-                <td>3.90</td>
-                <td>Akuntansi</td>
-                <td>Fakultas Ekonomi dan Bisnis</td>
-              </tr>
-              <tr>
-                <td>5220311115</td>
-                <td>Andi Rahmat</td>
-                <td>3.70</td>
-                <td>Ilmu Komunikasi</td>
-                <td>Fakultas Ilmu Sosial dan Politik</td>
-              </tr>
-            </tbody>
-          </table>
-        </body>
-        </html>
-              </textarea
-                >
-    
-                <button class="run-button" onclick="runTableCode()">Run</button>
-                <button class="undo-button" onclick="undoTableCode()">Undo</button>
-    
-                <h3>Hasil:</h3>
-                <div class="preview" id="previewTable"></div>
-              </div>
-    
-              <!-- Card Style untuk Latihan Form -->
-              <div class="tutorial-box" id="form">
-                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
-                <p>
-                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
-                  menggunakan HTML dan CSS langsung dari editor.
-                </p>
-    
-                <h3>HTML & CSS Code:</h3>
-                <textarea
-                  class="editor"
-                  rows="20"
-                  id="formCode"
-                  placeholder="Masukkan kode HTML dan CSS di sini"
-                >
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            /* Pengaturan tampilan body agar form berada di tengah halaman */
-      
-            /* Pengaturan container form login */
-            .login-container {
-              background-color: white;
-              padding: 20px;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              width: 100%;
-              max-width: 400px; /* Atur ukuran maksimum agar form tidak terlalu lebar */
-              margin-top: 20px;
-            }
-      
-            /* Pengaturan judul form */
-            .login-container h2 {
-              margin-bottom: 20px;
-              text-align: center;
-              font-size: 24px;
-              color: #333;
-            }
-      
-            /* Pengaturan input text dan password */
-            .login-container input[type="text"],
-            .login-container input[type="password"] {
-              width: 100%;
-              padding: 12px;
-              margin: 8px 0;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              font-size: 16px;
-            }
-      
-            /* Pengaturan tombol submit dan reset */
-            .login-container input[type="submit"],
-            .login-container input[type="reset"] {
-              width: 48%;
-              padding: 12px;
-              border: none;
-              border-radius: 4px;
-              background-color: #4caf50;
-              color: white;
-              cursor: pointer;
-              margin-top: 10px;
-              font-size: 16px;
-            }
-      
-            /* Pengaturan warna tombol reset (warna merah) */
-            .login-container input[type="reset"] {
-              background-color: #d4af37;
-            }
-      
-            /* Efek hover saat tombol diklik */
-            .login-container input[type="submit"]:hover,
-            .login-container input[type="reset"]:hover {
-              opacity: 0.9;
-            }
-      
-            /* Pengaturan layout tombol login dan reset agar sejajar */
-            .login-container .button-group {
-              display: flex;
-              justify-content: space-between;
-            }
-      
-            /* Menambahkan margin pada bagian bawah form untuk spacing */
-            .login-container form {
-              margin-bottom: 10px;
-            }
-      
-            /* Mengatur tampilan header agar tetap rapi */
-            .container {
-              width: 100%;
-            }
-          </style>
-        </head>
-        <body>
-          <div style="padding-top: 90px; display: flex; justify-content: center">
-            <!-- Container utama untuk form login -->
-            <div class="login-container">
-              <h2>Login</h2>
-              <!-- Form login, method POST digunakan untuk mengirim data secara aman -->
-              <form action="/login" method="POST">
-                <!-- Input username -->
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required />
-                <!-- Input password -->
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required />
-                <!-- Tombol submit dan reset -->
-                <div class="button-group">
-                  <input type="submit" value="Login" />
-                  <input type="reset" value="Reset" />
+               <main class="wrapper">
+        <section class="section" id="form">
+          <div class="tutorial-box">
+            <h2>Live HTML, CSS, and JavaScript Editor (Form)</h2>
+            <p>
+              Input your HTML, CSS, and JavaScript code below and see the result
+              instantly.
+            </p>
+
+            <!-- HTML Editor -->
+            <div class="code-editor">
+              <h3>HTML</h3>
+              <textarea
+                id="htmlCode1"
+                placeholder="Write your HTML here..."
+                rows="5"
+              >
+
+               <!DOCTYPE html>
+               <html lang="en">
+               <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               </head>
+               <body>
+                <div style="padding-top: 90px; display: flex; justify-content: center">
+                  <!-- Container utama untuk form login -->
+                  <div class="login-container">
+                    <h2 >Login</h2>
+                    <!-- Form login, method POST digunakan untuk mengirim data secara aman -->
+                    <form action="/login" method="POST">
+                      <!-- Input username -->
+                      <label for="username">Username:</label>
+                      <input type="text" id="username" name="username" required />
+                      <!-- Input password -->
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required />
+                      <!-- Tombol submit dan reset -->
+                      <div class="button-group">
+                        <input type="submit" value="Login" />
+                        <input type="reset" value="Reset" />
+                      </div>
+                    </form>
+                  </div>
                 </div>
-              </form>
+          
+              </body>
+               </html>
+                  
+              
+                  
+              </textarea>
             </div>
+
+            <!-- CSS Editor -->
+            <div class="code-editor">
+              <h3>CSS</h3>
+              <textarea
+                id="cssCode1"
+                placeholder="Write your CSS here..."
+                rows="5"
+              >
+                
+                <style>
+                  /* Pengaturan tampilan body agar form berada di tengah halaman */
+            
+                  /* Pengaturan container form login */
+                  .login-container {
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    max-width: 400px; /* Atur ukuran maksimum agar form tidak terlalu lebar */
+                    margin-top: 20px;
+                  }
+            
+                  /* Pengaturan judul form */
+                  .login-container h2 {
+                    margin-bottom: 20px;
+                    text-align: center;
+                    font-size: 24px;
+                    color: #ffffff;
+                  }
+            
+                  /* Pengaturan input text dan password */
+                  .login-container input[type="text"],
+                  .login-container input[type="password"] {
+                    width: 100%;
+                    padding: 12px;
+                    margin: 8px 0;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 16px;
+                  }
+            
+                  /* Pengaturan tombol submit dan reset */
+                  .login-container input[type="submit"],
+                  .login-container input[type="reset"] {
+                    width: 48%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 4px;
+                    background-color: #4caf50;
+                    color: white;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    font-size: 16px;
+                  }
+            
+                  /* Pengaturan warna tombol reset (warna merah) */
+                  .login-container input[type="reset"] {
+                    background-color: #d4af37;
+                  }
+            
+                  /* Efek hover saat tombol diklik */
+                  .login-container input[type="submit"]:hover,
+                  .login-container input[type="reset"]:hover {
+                    opacity: 0.9;
+                  }
+            
+                  /* Pengaturan layout tombol login dan reset agar sejajar */
+                  .login-container .button-group {
+                    display: flex;
+                    justify-content: space-between;
+                  }
+            
+                  /* Menambahkan margin pada bagian bawah form untuk spacing */
+                  .login-container form {
+                    margin-bottom: 10px;
+                  }
+            
+                  /* Mengatur tampilan header agar tetap rapi */
+                  .container {
+                    width: 100%;
+                  }
+                  .h2 {
+                    color: #fff;
+                    text-align: center;
+                  }
+                  
+                </style>
+
+              ></textarea
+              >
+            </div>
+
+            <!-- JavaScript Editor -->
+            <div class="code-editor">
+              <h3>JavaScript</h3>
+              <textarea
+                id="jsCode1"
+                placeholder="Write your JavaScript here..."
+                rows="5"
+              ></textarea>
+            </div>
+
+            <button class="run-button" onclick="runCode('1')">Run Code</button>
+            <button class="undo-button" onclick="clearCode('1')">
+              Clear Code
+            </button>
+
+            <h3>Output:</h3>
+            <iframe
+              id="outputFrame1"
+              class="preview"
+              title="Code Output"
+            ></iframe>
           </div>
-    
-        </body>
-        </html>
-              </textarea
-                >
-    
-                <button class="run-button" onclick="runFormCode()">Run</button>
-                <button class="undo-button" onclick="undoFormCode()">Undo</button>
-    
-                <h3>Hasil:</h3>
-                <div class="preview" id="previewForm"></div>
-              </div>
+        </section>
+      </main>
+
+
 
                <!-- Card Style untuk Latihan Page Margin -->
-               <div class="tutorial-box" id="page">
-                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
-                <p>
-                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
-                  menggunakan HTML dan CSS langsung dari editor.
-                </p>
-    
-                <h3>HTML & CSS Code:</h3>
-                <textarea
-                  class="editor"
-                  rows="20"
-                  id="contentCode"
-                  placeholder="Masukkan kode HTML dan CSS di sini"
-                >
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <style>
-          /* Dhani Triyoga Andika Putra_5220311111 */
-            /* Mengatur indentasi kiri dan kanan untuk h1 dan h2 */
-            h1,h2{
-                margin-left: 0em;
-                margin-right: 0em;
-            }
+
+               <main class="wrapper">
+                <section class="section" id="margin">
+                  <div class="tutorial-box">
+                    <h2>Live HTML, CSS, and JavaScript Editor (Margin)</h2>
+                    <p>
+                      Input your HTML, CSS, and JavaScript code below and see the result
+                      instantly.
+                    </p>
         
-      
-            /* Mengatur jarak atas dan bawah untuk elemen h1 dan h2 */
-            h1, h2 {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-      
-            /* Mengatur format khusus untuk h2 dengan kelas subsection */
-            h2.subsection {
-                font-style: italic;
-                color: #333;
-            }
-      
-            /* Mengatur indentasi baris pertama untuk paragraf */
-            p {
-                text-indent: 2em;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-      
-            
-        </style>
-      </head>
-      <body>
-      <div>
-        <h1>Judul Halaman (H1)</h1>
-        <h2>Subjudul (H2)</h2>
-        <h2 class="subsection">Sub Bagian (H2 dengan Kelas Subsection)</h2>
-        <p>
-            Ini adalah contoh paragraf pertama untuk latihan indentasi teks. Paragraf ini akan memiliki indentasi khusus di baris pertamanya.
-        </p>
-        <p>
-            Ini adalah contoh paragraf kedua. Setiap paragraf di bawah H1 dan H2 akan mengikuti aturan CSS yang sudah kita tetapkan.
-        </p>
-      </div>
-      </body>
-      </html>
-            </textarea
-                >
-    
-                <button class="run-button" onclick="runContentCode()">Run</button>
-                <button class="undo-button" onclick="undoContentCode()">
-                  Undo
-                </button>
-    
-                <h3>Hasil:</h3>
-                <div class="preview" id="previewContent" style="background-color: #d4af37;"></div>
-              </div>
-
-
-               <!-- Card Style untuk lokasi -->
-               <div class="tutorial-box" id="lokasi">
-                <h2 style="margin-left: 30%;">Latihan Page Margin dengan CSS Editor</h2>
-                <p>
-                  Latihan untuk mengatur margin, indentasi, dan tata letak halaman
-                  menggunakan HTML dan CSS langsung dari editor.
-                </p>
-    
-                <h3>HTML & CSS Code:</h3>
-                <textarea
-                  class="editor"
-                  rows="20"
-                  id="locCode"
-                  placeholder="Masukkan kode HTML dan CSS di sini"
-                >
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-       /* Location result box */
-        /* Container for content */
-        .container2 {
-        text-align: center;
-        background-color: #ffffff;
-        border-radius: 15px;
-        padding: 40px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-        width: 100%;
-        padding-top: 100px;
+                    <!-- HTML Editor -->
+                    <div class="code-editor">
+                      <h3>HTML</h3>
+                      <textarea
+                        id="htmlCode3"
+                        placeholder="Write your HTML here..."
+                        rows="5"
+                      >
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    </head>
+                    <body>
+                      <div>
+                        <h1>Judul Halaman (H1)</h1>
+                        <h2>Subjudul (H2)</h2>
+                        <h2 class="subsection">Sub Bagian (H2 dengan Kelas Subsection)</h2>
+                        <p>
+                            Ini adalah contoh paragraf pertama untuk latihan indentasi teks. Paragraf ini akan memiliki indentasi khusus di baris pertamanya.
+                        </p>
+                        <p>
+                            Ini adalah contoh paragraf kedua. Setiap paragraf di bawah H1 dan H2 akan mengikuti aturan CSS yang sudah kita tetapkan.
+                        </p>
+                      </div>
+                      </body>
+                    </html>
+                    </textarea>
+                    </div>
         
+                    <!-- CSS Editor -->
+                    <div class="code-editor">
+                      <h3>CSS</h3>
+                      <textarea
+                        id="cssCode3"
+                        placeholder="Write your CSS here..."
+                        rows="5"
+                      >
+                      <style>
+                        /* Dhani Triyoga Andika Putra_5220311111 */
+                          /* Mengatur indentasi kiri dan kanan untuk h1 dan h2 */
+                          h1,h2{
+                              margin-left: 0em;
+                              margin-right: 0em;
+                              color: #fffafa;
+
+                          }
+                      
+                    
+                          /* Mengatur jarak atas dan bawah untuk elemen h1 dan h2 */
+                          h1, h2 {
+                              margin-top: 0;
+                              margin-bottom: 0;
+                              color: #fffafa;
+                            
+
+                          }
+                    
+                          /* Mengatur format khusus untuk h2 dengan kelas subsection */
+                          h2.subsection {
+                              font-style: italic;
+                              color: #ff3e3e;
+                          }
+                    
+                          /* Mengatur indentasi baris pertama untuk paragraf */
+                          p {
+                              text-indent: 2em;
+                              margin-top: 0;
+                              margin-bottom: 0;
+                              color: #ffffff;
+
+                          }
+                    
+                          
+                      </style>
+                    </textarea>
+                    </div>
         
-      }
-    
+                    <!-- JavaScript Editor -->
+                    <div class="code-editor">
+                      <h3>JavaScript</h3>
+                      <textarea
+                        id="jsCode3"
+                        placeholder="Write your JavaScript here..."
+                        rows="5"
+                      ></textarea>
+                    </div>
+        
+                    <button class="run-button" onclick="runCode('3')">Run Code</button>
+                    <button class="undo-button" onclick="clearCode('3')">
+                      Clear Code
+                    </button>
+        
+                    <h3>Output:</h3>
+                    <iframe
+                      id="outputFrame3"
+                      class="preview"
+                      title="Code Output"
+                    ></iframe>
+                  </div>
+                </section>
+              </main>
+             
 
-     
+              
+               <!-- Card Style untuk Lokasi -->
 
-      /* Location result box */
-      #location {
-        margin-top: 20px;
-        padding: 20px;
-        border-radius: 15px;
-        background-color: #d4af37;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        display: none;
-      }
-          </style>
-        </head>
-        <body>
-        <!-- location -->
+               <main class="wrapper">
+                <section class="section" id="lokasi">
+                  <div class="tutorial-box">
+                    <h2>Live HTML, CSS, and JavaScript Editor (Geolocation)</h2>
+                    <p>
+                      Input your HTML, CSS, and JavaScript code below and see the result
+                      instantly.
+                    </p>
+        
+                    <!-- HTML Editor -->
+                    <div class="code-editor">
+                      <h3>HTML</h3>
+                      <textarea
+                        id="htmlCode4"
+                        placeholder="Write your HTML here..."
+                        rows="5"
+                      >
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    </head>
+                    <body>
+                      <!-- location -->
     <div class="container2">
       <h1>Get User Location with Geolocation API</h1>
       <button onclick="getLocation()">Get Location</button>
@@ -514,82 +609,404 @@
       </div>
     </div>
 
-    <script>
-      // Function to get user location
-      function getLocation() {
-        const locationBox = document.getElementById("location");
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition, showError);
-        } else {
-          alert("Geolocation is not supported by this browser.");
-        }
+                      </body>
+                    </html>
+                    </textarea>
+                    </div>
+        
+                    <!-- CSS Editor -->
+                    <div class="code-editor">
+                      <h3>CSS</h3>
+                      <textarea
+                        id="cssCode4"
+                        placeholder="Write your CSS here..."
+                        rows="5"
+                      >
+                      <style>
+                        /* Body styling */
+                        body {
+                          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                          margin: 0;
+                          padding: 0;
+                          background-color: #f0f4f8;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          height: 100vh;
+                        }
+                  
+                        /* Container for content */
+                        .container2 {
+                          text-align: center;
+                          background-color: #ffffff;
+                          border-radius: 15px;
+                          padding: 40px;
+                          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                          max-width: 500px;
+                          width: 100%;
+                          padding-top: 100px;
+                          
+                          
+                        }
+                  
+                        h1 {
+                          font-size: 24px;
+                          color: #333;
+                          margin-bottom: 20px;
+                        }
+                  
+                        /* Stylish button */
+                        button {
+                          background-color: #007bff;
+                          color: #fff;
+                          border: none;
+                          padding: 15px 30px;
+                          border-radius: 25px;
+                          font-size: 16px;
+                          cursor: pointer;
+                          transition: background-color 0.3s ease;
+                        }
+                  
+                        button:hover {
+                          background-color: #0056b3;
+                        }
+                  
+                        /* Location result box */
+                        #location {
+                          margin-top: 20px;
+                          padding: 20px;
+                          border-radius: 15px;
+                          background-color: #e9f7f9;
+                          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                          display: none;
+                        }
+                  
+                        h3 {
+                          margin-bottom: 10px;
+                          font-size: 20px;
+                          color: #007bff;
+                        }
+                  
+                        p {
+                          font-size: 16px;
+                          color: #555;
+                          margin: 5px 0;
+                        }
+                      </style>
+                 
+                    </textarea>
+                    </div>
+        
+                    <!-- JavaScript Editor -->
+                    <div class="code-editor">
+                      <h3>JavaScript</h3>
+                      <textarea
+                        id="jsCode4"
+                        placeholder="Write your JavaScript here..."
+                        rows="5"
+                      >
+                      <script>
+                        // Function to get user location
+                        function getLocation() {
+                          const locationBox = document.getElementById("location");
+                          if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition, showError);
+                          } else {
+                            alert("Geolocation is not supported by this browser.");
+                          }
+                  
+                          // Add loading effect to the button
+                          const button = document.querySelector("button");
+                          button.innerHTML = "Getting Location...";
+                          button.disabled = true;
+                          button.style.backgroundColor = "#ccc";
+                        }
+                  
+                        // Function to display position
+                        function showPosition(position) {
+                          document.getElementById("latitude").innerHTML =
+                            position.coords.latitude;
+                          document.getElementById("longitude").innerHTML =
+                            position.coords.longitude;
+                          document.getElementById("accuracy").innerHTML =
+                            position.coords.accuracy + " meters";
+                  
+                          // Show the location div
+                          const locationBox = document.getElementById("location");
+                          locationBox.style.display = "block";
+                  
+                          // Revert button state
+                          const button = document.querySelector("button");
+                          button.innerHTML = "Get Location";
+                          button.disabled = false;
+                          button.style.backgroundColor = "#007bff";
+                        }
+                  
+                        // Function to handle errors
+                        function showError(error) {
+                          switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                              alert("User denied the request for Geolocation.");
+                              break;
+                            case error.POSITION_UNAVAILABLE:
+                              alert("Location information is unavailable.");
+                              break;
+                            case error.TIMEOUT:
+                              alert("The request to get user location timed out.");
+                              break;
+                            case error.UNKNOWN_ERROR:
+                              alert("An unknown error occurred.");
+                              break;
+                          }
+                  
+                          // Revert button state even in case of an error
+                          const button = document.querySelector("button");
+                          button.innerHTML = "Get Location";
+                          button.disabled = false;
+                          button.style.backgroundColor = "#007bff";
+                        }
+                      </script>
+                    </textarea>
+                    </div>
+        
+                    <button class="run-button" onclick="runCode('4')">Run Code</button>
+                    <button class="undo-button" onclick="clearCode('4')">
+                      Clear Code
+                    </button>
+        
+                    <h3>Output:</h3>
+                    <iframe
+                      id="outputFrame4"
+                      class="preview"
+                      title="Code Output"
+                    ></iframe>
+                  </div>
+                </section>
+              </main>
 
-        // Add loading effect to the button
-        const button = document.querySelector("button");
-        button.innerHTML = "Getting Location...";
-        button.disabled = true;
-        button.style.backgroundColor = "#ccc";
-      }
+                <!-- Card Style untuk Latihan Canvas -->
 
-      // Function to display position
-      function showPosition(position) {
-        document.getElementById("latitude").innerHTML =
-          position.coords.latitude;
-        document.getElementById("longitude").innerHTML =
-          position.coords.longitude;
-        document.getElementById("accuracy").innerHTML =
-          position.coords.accuracy + " meters";
+                <main class="wrapper">
+                  <section class="section" id="canvas">
+                    <div class="tutorial-box">
+                      <h2>Live HTML, CSS, and JavaScript Editor  (SVG)</h2>
+                      <p>
+                        Input your HTML, CSS, and JavaScript code below and see the result
+                        instantly.
+                      </p>
+          
+                      <!-- HTML Editor -->
+                      <div class="code-editor">
+                        <h3>HTML</h3>
+                        <textarea
+                          id="htmlCode5"
+                          placeholder="Write your HTML here..."
+                          rows="5"
+                        >
+                      <!DOCTYPE html>
+                      <html lang="en">
+                      <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      </head>
+                      <body>
+                        <h3 class="text3">SVG Circle</h3>
+                        
+                        <svg height="100" width="100">
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="red"
+                            stroke-width="4"
+                            fill="blue"
+                          />
+                        </svg>
 
-        // Show the location div
-        const locationBox = document.getElementById("location");
-        locationBox.style.display = "block";
+                        <h3 class="text3">SVG Logo</h3>
+                        <svg height="130" width="500">
+                          <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop
+                                offset="0%"
+                                style="stop-color: rgb(255, 255, 0); stop-opacity: 0"
+                              />
+                              <stop
+                                offset="100%"
+                                style="stop-color: rgb(255, 0, 255); stop-opacity: 1"
+                              />
+                            </linearGradient>
+                          </defs>
+                          <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                          <text fill="green" font-size="45" font-family="Arial" x="50" y="86">
+                            UTY
+                          </text>
+                        </svg>
 
-        // Revert button state
-        const button = document.querySelector("button");
-        button.innerHTML = "Get Location";
-        button.disabled = false;
-        button.style.backgroundColor = "#007bff";
-      }
+                        <h3 class="text3">SVG Rectangle</h3>
+                        <svg width="400" height="100">
+                          <rect
+                            width="400"
+                            height="100"
+                            style="fill: rgb(255, 0, 255); stroke-width: 10; stroke: rgb(0, 255, 0)"
+                          />
+                        </svg>
+                        
+                        <h3 class="text3">SVG Rounded Rectangle</h3>
+                        <svg width="400" height="400">
+                          <rect
+                            x="50"
+                            y="20"
+                            rx="20"
+                            ry="20"
+                            width="300"
+                            height="300"
+                            style="fill: red; stroke: rgb(224, 221, 221); stroke-width: 5; opacity: 0.5"
+                          />
+                        </svg>
 
-      // Function to handle errors
-      function showError(error) {
-        switch (error.code) {
-          case error.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
-            break;
-          case error.POSITION_UNAVAILABLE:
-            alert("Location information is unavailable.");
-            break;
-          case error.TIMEOUT:
-            alert("The request to get user location timed out.");
-            break;
-          case error.UNKNOWN_ERROR:
-            alert("An unknown error occurred.");
-            break;
-        }
 
-        // Revert button state even in case of an error
-        const button = document.querySelector("button");
-        button.innerHTML = "Get Location";
-        button.disabled = false;
-        button.style.backgroundColor = "#007bff";
-      }
-    </script>
+                        <h3 class="text3">SVG Star</h3>
+                        <head>
+                          <meta charset="UTF-8" />
+                          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                          <title>Document</title>
+                        </head>
+                        <body>
+                          <svg height="300" width="200">
+                            <polygon
+                              points="100,10 40,198 190,78 10,78 160,198"
+                              style="fill: rgb(230, 224, 224); stroke: red; stroke-width: 5; fill-rule: evenodd"
+                            />
+                            sorry, your browser does not support inline SVG.
+                          </svg>
 
-        </body>
-        </html>
-              </textarea
-                >
-    
-                <button class="run-button" onclick="runLocCode()">Run</button>
-                <button class="undo-button" onclick="undoLocCode()">Undo</button>
-    
-                <h3>Hasil:</h3>
-                <div class="preview" id="previewLoc"></div>
+
+                        </body>
+                      </html>
+                      </textarea>
+                      </div>
+          
+                      <!-- CSS Editor -->
+                      <div class="code-editor">
+                        <h3>CSS</h3>
+                        <textarea
+                          id="cssCode5"
+                          placeholder="Write your CSS here..."
+                          rows="5"
+                        >
+                        <style>
+                         
+                          p{
+                            color: #ffffff;
+                            text-align: center;
+                          }
+                          .text3{
+                            color: #ffffff;
+                            text-align: center;
+                          }
+
+                            
+                        </style>
+                      </textarea>
+                      </div>
+          
+                      <!-- JavaScript Editor -->
+                      <div class="code-editor">
+                        <h3>JavaScript</h3>
+                        <textarea
+                          id="jsCode5"
+                          placeholder="Write your JavaScript here..."
+                          rows="5"
+                        ></textarea>
+                      </div>
+          
+                      <button class="run-button" onclick="runCode('5')">Run Code</button>
+                      <button class="undo-button" onclick="clearCode('5')">
+                        Clear Code
+                      </button>
+          
+                      <h3>Output:</h3>
+                      <iframe
+                        id="outputFrame5"
+                        class="preview"
+                        title="Code Output"
+                      ></iframe>
+                    </div>
+                  </section>
+                </main>
+
+
+               
+                <!-- Card Style untuk Deploy -->
+
+                <div class="container" style="padding: 150px;">
+                  <h2 style="color: #ffffff;">Tutorial Deploy Website ke GitHub</h2>
+                  
+                  <h2>Langkah 1: Siapkan Repository di GitHub</h2>
+                  <div class="step">
+                      <ol style="color: #ffffff;">
+                          <li>Buka <a href="https://github.com" target="_blank">GitHub</a> dan login ke akun Anda.</li>
+                          <li>Klik tombol <strong>New</strong> untuk membuat repository baru.</li>
+                          <li>Masukkan nama repository (misalnya, <code>my-website</code>).</li>
+                          <li>Pilih <strong>Public</strong> agar dapat diakses semua orang.</li>
+                          <li>Klik <strong>Create repository</strong> untuk membuat repository.</li>
+                      </ol>
+                  </div>
+          
+                  <h2>Langkah 2: Upload File Website ke Repository</h2>
+                  <div class="step">
+                      <ul>
+                          <li style="color: #ffffff;"><strong>Menggunakan Git:</strong></li>
+                      </ul>
+                      <p>Jika sudah menginstal Git, buka terminal dan jalankan perintah berikut:</p>
+                      <pre>
+                          <code style="color: #ffffff;">
+          git init
+          git add .
+          git commit -m "Initial commit"
+          git branch -M main
+          git remote add origin https://github.com/username/my-website.git
+          git push -u origin main
+                          </code>
+                      </pre>
+                      <p>Ganti <code>username</code> dan <code>my-website</code> sesuai dengan nama pengguna dan repository Anda.</p>
+                  </div>
+          
+                  <h2>Langkah 3: Aktifkan GitHub Pages</h2>
+                  <div class="step" style="color: #ffffff;">
+                      <ol>
+                          <li>Masuk ke halaman repository Anda di GitHub.</li>
+                          <li>Klik tab <strong>Settings</strong>.</li>
+                          <li>Gulir ke bawah dan pilih <strong>Pages</strong>.</li>
+                          <li>Pilih <code>main</code> (atau <code>master</code>) sebagai branch sumber GitHub Pages.</li>
+                          <li>Klik <strong>Save</strong> untuk menyimpan pengaturan.</li>
+                          <li>GitHub akan memberikan URL untuk website Anda, misalnya: <code>https://username.github.io/my-website</code>.</li>
+                      </ol>
+                  </div>
+          
+                  <h2 >Langkah 4: Cek Status Website</h2>
+                  <div class="step" style="color: #ffffff;">
+                      <ol>
+                          <li>Tunggu beberapa menit hingga GitHub Pages memproses website Anda.</li>
+                          <li>Buka URL yang diberikan oleh GitHub Pages untuk melihat website Anda online.</li>
+                      </ol>
+                  </div>
+          
+                  <h2>Langkah 5: Update Website (Opsional)</h2>
+                  <div class="step">
+                      <p>Jika ingin memperbarui konten website, lakukan perubahan pada file di proyek lokal Anda, lalu jalankan perintah berikut:</p>
+                      <pre>
+                          <code style="color: #ffffff;">
+          git add .
+          git commit -m "Update website content"
+          git push origin main
+                          </code>
+                      </pre>
+                      <p>Perubahan akan otomatis diperbarui di GitHub Pages setelah beberapa saat.</p>
+                  </div>
               </div>
-    
-            </section>
-          </main>
+              
     
   </body>
   </html>
@@ -603,5 +1020,7 @@
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
+    
+
   </body>
 </html>

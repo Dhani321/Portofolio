@@ -744,3 +744,13 @@ footer {
   overflow: scroll;
   padding: 10px;
 }
+
+.preview {
+  margin-top: 100px; /* Space above the preview section */
+  padding: 10px; /* Padding inside the preview area */
+  border: 10px solid #100030; /* Border around the preview area */
+  background-color: #100030; /* Light gray background for the preview */
+  color: #333; /* Text color for preview */
+  width: 700px;
+  height: 200px;
+}
